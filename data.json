@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Updated Shelter",
+    "location": "Updated Location",
+    "capacity": 200
+  },
+  {
+    "id": 2,
+    "name": "Bomb Shelter",
+    "location": "Ramat gan, Hayetrsa 11",
+    "capacity": 100
+  },
+  {
+    "id": 3,
+    "name": "New Shelter",
+    "location": "New Location",
+    "capacity": 150
+  },
+  {
+    "id": 4,
+    "name": "Updated Shelter",
+    "location": "Updated Location",
+    "capacity": 200
+  },
+  {
+    "id": 5,
+    "name": "New Shelter",
+    "location": "New Location",
+    "capacity": 150
+  }
+]

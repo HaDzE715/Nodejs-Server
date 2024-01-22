@@ -28,5 +28,53 @@
     "name": "New Shelter",
     "location": "New Location",
     "capacity": 150
+  },
+  {
+    "id": 6,
+    "name": "New Shelter",
+    "location": "New Location",
+    "capacity": 150
+  },
+  {
+    "id": 7,
+    "name": "New Shelter",
+    "location": "New Location",
+    "capacity": 150
+  },
+  {
+    "id": 8,
+    "name": "New Shelter",
+    "location": "New Location",
+    "capacity": 150
+  },
+  {
+    "id": 9,
+    "name": "PostMan Request",
+    "location": "PostMan Location",
+    "capacity": 69
+  },
+  {
+    "id": 10,
+    "name": "PostMan newTest",
+    "location": "PostMan newTest",
+    "capacity": 69
+  },
+  {
+    "id": 11,
+    "name": "PostMan newTest",
+    "location": "PostMan newTest",
+    "capacity": 169
+  },
+  {
+    "id": 12,
+    "name": "ServerTest",
+    "location": "ServerTest",
+    "capacity": "269"
+  },
+  {
+    "id": 13,
+    "name": "CheckCheck",
+    "location": "Aloha miam",
+    "capacity": "1212"
   }
 ]

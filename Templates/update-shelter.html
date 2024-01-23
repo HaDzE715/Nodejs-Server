@@ -1,0 +1,47 @@
+<h2>Update Shelter</h2>
+<h4>You can find the ID of the shelter in the shelters list.</h4>
+
+<form id="updateShelterForm">
+  <label for="shelterId">Shelter ID:</label>
+  <input type="text" id="shelterId" name="shelterId" required><br>
+
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" required><br>
+
+  <label for="location">Location:</label>
+  <input type="text" id="location" name="location" required><br>
+
+  <label for="capacity">Capacity:</label>
+  <input type="number" id="capacity" name="capacity" required><br>
+
+  <input type="button" value="Update Shelter" onclick="updateShelter()">
+</form>
+
+<script>
+  function updateShelter() {
+    const shelterId = document.getElementById('shelterId').value;
+    const name = document.getElementById('name').value;
+    const location = document.getElementById('location').value;
+    const capacity = document.getElementById('capacity').value;
+
+    const data = {
+      name: name,
+      location: location,
+      capacity: capacity
+    };
+
+    const xhr = new XMLHttpRequest();
+    xhr.open('PUT', `http://127.0.0.1:3000/ShelterUpdate/${shelterId}`, true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+          alert(xhr.responseText); // Show success message
+        } else {
+          alert('Failed to update shelter'); // Show error message
+        }
+      }
+    };
+    xhr.send(JSON.stringify(data)); // sending the data to server
+  }
+</script>

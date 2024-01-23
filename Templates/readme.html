@@ -1,69 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🏠 Shelter Locator</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <title>Shelter Locator Documentation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+    }
 
-        ul {
-            list-style-type: disc;
-            margin-left: 20px;
-        }
+    h1,
+    h2,
+    h3 {
+      color: #fff;
+    }
 
-        h1 {
-            margin-bottom: 40px;
-        }
+    h2 {
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 5px;
+      margin-bottom: 10px;
+    }
+    .postman{
+      color:#e6a037;
+    }
 
-        #FirstParagraph {
-            margin-top: 10px;
-            margin-bottom: 30px;
-        }
+    code {
+      background-color: #ccc;
+      padding: 2px 4px;
+      border: 1px solid #ccc;
+      color:#ad0505;
+    }
+    .social-links {
+      margin-top: 20px;
+    }
 
-        #APIList {
-            margin-bottom: 30px;
-        }
-    </style>
+    .social-links a {
+      display: inline-block;
+      margin-right: 15px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+    }
+  </style>
 </head>
+
 <body>
-    <h1>🏠 Shelter Locator</h1>
 
-    <h2>📜 Description</h2>
-    <div id="FirstParagraph">
-        <p>Shelter Locator is a simple web application,</p>
-        <p>that allows users to locate, update, delete, and add new shelters. 🚀</p>
-    </div>
+  <h1>🏠 Shelter Locator Documentation</h1>
+  <a href="https://documenter.getpostman.com/view/31556366/2s9Yynk47b" target="_blank" class="postman">Postman Documentation.</a>
 
-    <h2>🚀 API's for the project:</h2>
-    <p id="#FirstParagraph">The Shelter Locator project exposes the following API endpoints:</p>
-    <ul id="APIList">
-        <li><strong>`GET  &nbsp;/getShelters`</strong>: Retrieve the list of shelters.</li>
-        <li><strong>`POST &nbsp;/addShelter`</strong>: Add a new shelter.</li>
-        <li><strong>`PUT  &nbsp;/updateShelter`</strong>: Update shelter information.</li>
-        <li><strong>`DELETE  &nbsp;deleteShelter/:id`</strong>: Delete a shelter.</li>
-    </ul>
+  <!-- <p>Shelter Locator is a user-friendly web application that enables users to locate, update, delete, and add new shelters.</p> -->
 
-    <h2>🛠 Adding a new shelter</h2>
-    <p id="#FirstParagraph">To add a new shelter:</p>
+  <h2>🖥️ User Interface</h2>
+
+  <h3>View Shelters</h3>
+  <ul>
+    <li>Navigate to the <a href="Shelters">Shelters</a> tab to view a list of shelters.</li>
+  </ul>
+
+  <h3>Add a New Shelter</h3>
+  <ul>
+    <li>Visit the <a href="ShelterCreation">Add Shelter</a> page on the website.</li>
+    <li>Fill in the required information.</li>
+    <li>Click the "Add Shelter" button.</li>
+  </ul>
+
+  <h3>Update Shelter Information</h3>
+  <ul>
+    <li>Visit the <a href="ShelterDel">Update Shelter</a> page on the website.</li>
+    <li>Enter the Shelter ID and update the necessary information.</li>
+    <li>Click the "Update Shelter" button.</li>
+  </ul>
+
+  <h3>Delete a Shelter</h3>
+  <ul>
+    <li>Visit the <a href="ShelterUp">Delete Shelter</a> page on the website.</li>
+    <li>Enter the Shelter ID you want to delete.</li>
+    <li>Click the "Delete Shelter" button.</li>
+  </ul>
+
+  <h2>🚀 API Endpoints</h2>
+
+  <h3>Get Shelters</h3>
+  <ul>
+    <li><strong>Method:</strong> <code>GET</code></li>
+    <li><strong>Endpoint:</strong> <code>/Shelters</code></li>
+    <li><strong>Description:</strong> Retrieve the list of shelters.</li>
+  </ul>
+
+  <h3>Add Shelter</h3>
+  <ul>
+    <li><strong>Method:</strong> <code>POST</code></li>
+    <li><strong>Endpoint:</strong> <code>/ShelterCreation</code></li>
+    <li><strong>Description:</strong> Add a new shelter.</li>
+  </ul>
+
+  <h3>Update Shelter</h3>
+  <ul>
+    <li><strong>Method:</strong> <code>PUT</code></li>
+    <li><strong>Endpoint:</strong> <code>/ShelterUp</code></li>
+    <li><strong>Description:</strong> Update shelter information.</li>
+  </ul>
+
+  <h3>Delete Shelter</h3>
+  <ul>
+    <li><strong>Method:</strong> <code>DELETE</code></li>
+    <li><strong>Endpoint:</strong> <code>/ShelterDel/:id</code></li>
+    <li><strong>Description:</strong> Delete a shelter.</li>
+  </ul>
+
+  <h2>🧾 Explanation</h2>
+  <ul>
+    <li><b>View the list of shelters:</b>
+        <ul>Shelters tab will send a request to the server via <code>/Shelters</code> endpoint where it will retreive the data that is found in data.JSON file.</ul>
+    </li><br>
+    <li><b>Add new shelters:</b>
+        <ul>Adding new shelter is a form in the website that will send a POST request to the server via <code>/CreateShelter</code> 
+            endpoint where it will pass the parameters to it via JSON.</ul>
+    </li><br>
+    <li><b>Update existing shelter information:</b>
+        <ul>When updating a shelter the website will send a PUT request to the server via <code>/ShelterUpdate</code> endpoint
+        where it will pass the parameters to it via JSON.</ul>
+    </li><br>
+    <li><b>Delete shelters:</b>
     <ul>
-        <li>Make a <strong>`POST`</strong> request to the <strong>`/addShelters`</strong> endpoint.</li>
-        <li>Include the required information in the request body.</li>
-        <p2><br><strong>Or:</strong><br></p3>
-        <br><li>You can simply go to the add shelter page and add there.</li>
-    </ul>
-    <h2>🛠 Usage</h2>
-    <p id="#FirstParagraph">Shelter Locator provides a user-friendly interface to:</p>
-    <ul>
-        <li>View the list of shelters</li>
-        <li>Add new shelters</li>
-        <li>Update existing shelter information</li>
-        <li>Delete shelters</li>
-    </ul>
+        When deleting an existing shelter the website will send a DELETE request to the server via <code>/ShelterDelete</code> endpoint
+            where it will pass the id to the server and perform the remove according to the id passed.
+        </code>
+    </ul></li><br>
+  </ul>
+
+  <div class="social-links">
+    <h2><i class="fas fa-comments"></i> Connect with me </h2>
+    <a href="https://github.com/HaDzE715" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+    <a href="https://www.linkedin.com/in/hade-bayaa/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+  </div>
 </body>
 </html>
